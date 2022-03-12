@@ -4,9 +4,9 @@ function NavBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-facebook"></i>
+        <i className="fa-brands fa-github"></i>
+        <i className="fa-brands fa-linkedin"></i>
+        <i className="fa-brands fa-facebook"></i>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -19,7 +19,7 @@ function NavBar() {
       </div>
       <div className="topRight">
         <img src={avatar} alt="avatar" className="topImage" />
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
   );

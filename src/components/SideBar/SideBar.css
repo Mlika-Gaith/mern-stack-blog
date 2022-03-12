@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   color: #001219;
-  box-shadow: 3em -3em 3em rgba(0, 0, 0, 0.1);
+  box-shadow: 0.2em -0.2em 0.2em rgba(0, 0, 0, 0.1);
 }
 .sideBarItem {
   display: flex;

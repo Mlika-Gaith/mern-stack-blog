@@ -1,12 +1,12 @@
 import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
-import Home from "./pages/home/Home";
+import SinglePost from "./pages/post/SinglePostPage";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Home />
+      <SinglePost />
     </div>
   );
 }
