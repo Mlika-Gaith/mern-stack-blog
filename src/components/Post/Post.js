@@ -5,7 +5,7 @@ function Post() {
     <div className="post">
       <h4>Poly python developpers club</h4>
       <img src={postImg} alt="" />
-      <p className="postDate">12th DEcember, 2018;</p>
+      <p className="postDate">12th December, 2018;</p>
       <p className="postDescription">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vel,
         nobis quos repellat id voluptates ea reprehenderit hic adipisci dolorum
