@@ -1,0 +1,92 @@
+.sideBar {
+  flex: 3;
+  height: 30%;
+  margin: 20px;
+  padding-bottom: 30px;
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #001219;
+  box-shadow: 3em -3em 3em rgba(0, 0, 0, 0.1);
+}
+.sideBarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sideBarTitle {
+  margin: 15px;
+  padding: 8px;
+  border-bottom: 1px solid #001219;
+  font-family: "Lora", serif;
+  font-weight: 200;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+}
+.sideBarItem img {
+  margin: 15px;
+  height: 140px;
+  border-radius: 20px;
+}
+.sideBarItem p {
+  padding: 30px;
+  font-size: 18px;
+  text-align: justify;
+}
+.sideBarList {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sideBarListItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #4b79a1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #283e51,
+    #4b79a1
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #283e51,
+    #4b79a1
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+.sideBar i {
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
