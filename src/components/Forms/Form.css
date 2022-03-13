@@ -12,8 +12,8 @@ form label {
   text-transform: capitalize;
 }
 form input {
-  padding: 20px;
-  width: 80%;
+  padding: 18px;
+  width: 70%;
   border: 1px solid #2b2d42;
   border-radius: 10px;
   color: #2b2d42;
@@ -23,10 +23,14 @@ form input {
   outline: none;
   transition: ease 0.3s;
 }
+.names input {
+  width: 90%;
+}
 .names {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 .name {
   display: flex;
