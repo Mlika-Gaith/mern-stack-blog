@@ -1,12 +1,12 @@
 import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
-import Write from "./pages/write/Write";
+import UpdateAccount from "./pages/account/UpdateAccount";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Write />
+      <UpdateAccount />
     </div>
   );
 }
