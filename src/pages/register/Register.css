@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.registerForm {
+  margin: 100px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.2);
+}
+.imgContainer {
+  order: 2;
+  background-image: url(../../images/register.jpg);
+  background-position: center center;
+  width: 70%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imgContainer h3,
+h2 {
+  font-family: "Inconsolata", monospace;
+  color: #001219;
+  padding: 10px;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 60px;
+}
+h3 {
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+}
+.formContainer {
+  width: 40%;
+  background-color: #ffffff;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

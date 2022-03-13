@@ -1,12 +1,13 @@
 import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
-import UpdateAccount from "./pages/account/UpdateAccount";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <UpdateAccount />
+      <Register />
     </div>
   );
 }

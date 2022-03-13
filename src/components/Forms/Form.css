@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+}
+form label {
+  padding: 10px;
+  color: #2b2d42;
+  font-family: "Lora", serif;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+form input {
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #2b2d42;
+  border-radius: 10px;
+  color: #2b2d42;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: ease 0.3s;
+}
+.names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name:first-child {
+  padding-right: 20px;
+}
+.name:last-child {
+  padding-left: 20px;
+  padding-right: 20px;
+}
