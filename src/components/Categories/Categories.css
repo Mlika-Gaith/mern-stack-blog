@@ -1,0 +1,57 @@
+ul {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+label {
+  color: #2b2d42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 2px solid #2b2d42;
+  border-radius: 25px;
+  padding: 8px 12px;
+  white-space: nowrap;
+  font-family: "Lora", serif;
+  margin: 5px 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  content: "\2b";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  transition: transform 0.3s ease-in-out;
+}
+input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  transform: rotate(-360deg);
+  transition: transform 0.3s ease-in-out;
+}
+input[type="checkbox"]:checked + label {
+  border: 2px solid #2b2d42;
+  background-color: #2b2d42;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+input[type="checkbox"] {
+  display: absolute;
+  position: absolute;
+  opacity: 0;
+}
