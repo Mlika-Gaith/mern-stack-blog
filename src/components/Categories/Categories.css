@@ -1,11 +1,11 @@
-ul {
+.categories {
   list-style: none;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-label {
+.category label {
   color: #2b2d42;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ label {
   transition: all 0.2s;
   cursor: pointer;
 }
-label::before {
+.category label::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -39,18 +39,18 @@ label::before {
   padding: 2px 6px 2px 2px;
   transition: transform 0.3s ease-in-out;
 }
-input[type="checkbox"]:checked + label::before {
+.category input[type="checkbox"]:checked + label::before {
   content: "\f00c";
   transform: rotate(-360deg);
   transition: transform 0.3s ease-in-out;
 }
-input[type="checkbox"]:checked + label {
+.category input[type="checkbox"]:checked + label {
   border: 2px solid #2b2d42;
   background-color: #2b2d42;
   color: #ffffff;
   transition: all 0.2s;
 }
-input[type="checkbox"] {
+.category input[type="checkbox"] {
   display: absolute;
   position: absolute;
   opacity: 0;
