@@ -1,12 +1,12 @@
 import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
-import SinglePost from "./pages/post/SinglePostPage";
+import Write from "./pages/write/Write";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <SinglePost />
+      <Write />
     </div>
   );
 }
