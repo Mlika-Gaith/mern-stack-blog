@@ -1,14 +1,14 @@
 import Form from "../../components/Forms/LoginForm";
-import "./Login.css";
+import styles from "./Login.module.css";
 function Login() {
   return (
-    <div className="container">
-      <div className="loginForm">
-        <div className="imgContainer">
+    <div className={styles.container}>
+      <div className={styles.loginForm}>
+        <div className={styles.imgContainer}>
           <h2>Poly Blog</h2>
           <h3>Personal students blog</h3>
         </div>
-        <div className="formContainer">
+        <div className={styles.formContainer}>
           <Form />
         </div>
       </div>
