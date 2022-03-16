@@ -1,7 +1,7 @@
-import "./Button.css";
+import styles from "./Button.module.css";
 function FormButton(props) {
   return (
-    <div className="loginBtn">
+    <div className={styles.loginBtn}>
       <button>{props.btnText}</button>
       <span>{props.spanText}</span>
     </div>

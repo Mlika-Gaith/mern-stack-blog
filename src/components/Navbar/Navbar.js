@@ -1,6 +1,7 @@
 import "./NavBar.css";
-import avatar from "../../images/avatar.png";
+import { NavLink } from "react-router-dom";
 function NavBar() {
+  let user = true;
   return (
     <div className="top">
       <div className="topLeft">
@@ -10,15 +11,37 @@ function NavBar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">Home</li>
+          <li className="topListItem">
+            <NavLink to="/">Home</NavLink>
+          </li>
           <li className="topListItem">About</li>
-          <li className="topListItem">Contact</li>
-          <li className="topListItem">Write</li>
-          <li className="topListItem">Logout</li>
+          {user ? (
+            <li className="topListItem">
+              <NavLink to="/write">Write</NavLink>
+            </li>
+          ) : (
+            <li className="topListItem">
+              <NavLink to="/login">Write</NavLink>
+            </li>
+          )}
+
+          {user ? (
+            <li className="topListItem">Logout</li>
+          ) : (
+            <NavLink to="/register">
+              <li className="topListItem">Register</li>
+            </NavLink>
+          )}
         </ul>
       </div>
       <div className="topRight">
-        <img src={avatar} alt="avatar" className="topImage" />
+        {user ? (
+          <NavLink to="/settings">
+            <i className="fa-solid fa-user-gear"></i>
+          </NavLink>
+        ) : (
+          <button>hello</button>
+        )}
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>

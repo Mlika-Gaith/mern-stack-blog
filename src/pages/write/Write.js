@@ -1,16 +1,16 @@
-import "./Write.css";
+import styles from "./Write.module.css";
 import img from "../../images/post1.png";
 import Categories from "../../components/Categories/Categories";
 function Write() {
   return (
-    <div className="write">
+    <div className={styles.write}>
       <form action="">
-        <div className="textContainer">
+        <div className={styles.textContainer}>
           <h3>Write your post:</h3>
-          <div className="imgContainer">
+          <div className={styles.imgContainer}>
             <img src={img} alt="add pic to your blog post" />
             <input type="file" id="fileUpload" />
-            <label htmlFor="fileUpload" className="fileUploadLabel">
+            <label htmlFor="fileUpload" className={styles.fileUploadLabel}>
               choose an image : <i className="fa-solid fa-images"></i>
             </label>
           </div>
@@ -23,12 +23,12 @@ function Write() {
             placeholder="Tell your story ..."
           ></textarea>
         </div>
-        <div className="categoriesContainer">
-          <div className="checkboxs">
+        <div className={styles.categoriesContainer}>
+          <div className={styles.checkboxs}>
             <h4>Add Categories to your post : </h4>
             <Categories />
           </div>
-          <div className="publishBtn">
+          <div className={styles.publishBtn}>
             <button>publish</button>
           </div>
         </div>

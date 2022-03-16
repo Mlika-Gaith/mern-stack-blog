@@ -1,17 +1,17 @@
-form {
+.login_form {
   display: flex;
   flex-direction: column;
   padding: 20px;
   justify-content: center;
 }
-form label {
+.login_form label {
   padding: 10px;
   color: #2b2d42;
   font-family: "Lora", serif;
   font-size: 18px;
   text-transform: capitalize;
 }
-form input {
+.login_form input {
   padding: 12px 16px;
   width: 70%;
   border: 1px solid #2b2d42;
@@ -23,28 +23,8 @@ form input {
   outline: none;
   transition: ease 0.3s;
 }
-.names input {
-  width: 90%;
-}
-.names {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.name:first-child {
-  padding-right: 20px;
-}
-.name:last-child {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.btn-container {
+.login_form .btn_container {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;

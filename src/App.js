@@ -1,16 +1,35 @@
-import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
-import Register from "./pages/register/Register";
-import Login from "./pages/login/Login";
 import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Write from "./pages/write/Write";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import UpdateAccount from "./pages/account/UpdateAccount";
 
 function App() {
+  let user = true;
   return (
-    <div className="App">
+    <>
       <NavBar />
-      <Login />
+      <Routes>
+        <Route path="/" element={<Home />} exact />
+        <Route path="/write" element={<Write />} />
+        {user ? (
+          <Route path="/login" element={<Home />} />
+        ) : (
+          <Route path="/login" element={<Login />} />
+        )}
+        <Route path="/login" element={<Login />} />
+        {user ? (
+          <Route path="/register" element={<Home />} />
+        ) : (
+          <Route path="/register" element={<Register />} />
+        )}
+        <Route path="/settings" element={<UpdateAccount />} />
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

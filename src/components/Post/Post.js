@@ -1,12 +1,12 @@
-import "./Post.css";
+import styles from "./Post.module.css";
 import postImg from "../../images/post1.png";
 function Post() {
   return (
-    <div className="post">
+    <div className={styles.post}>
       <h4>Poly python developpers club</h4>
       <img src={postImg} alt="" />
-      <p className="postDate">12th December, 2018;</p>
-      <p className="postDescription">
+      <p className={styles.postDate}>12th December, 2018;</p>
+      <p className={styles.postDescription}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vel,
         nobis quos repellat id voluptates ea reprehenderit hic adipisci dolorum
         iure facilis ducimus ab ipsam dignissimos ipsum, pariatur dolores?Lorem
@@ -15,13 +15,13 @@ function Post() {
         voluptatum, placeat maxime, sed necessitatibus vitae, suscipit
         reprehenderit earum! Soluta?
       </p>
-      <div className="postCategories">
-        <div className="postCategory">student life</div>
-        <div className="postCategory">student life</div>
-        <div className="postCategory">student life</div>
-        <div className="postCategory">student life</div>
+      <div className={styles.postCategories}>
+        <div className={styles.postCategory}>student life</div>
+        <div className={styles.postCategory}>student life</div>
+        <div className={styles.postCategory}>student life</div>
+        <div className={styles.postCategory}>student life</div>
       </div>
-      <div className="readmore">
+      <div className={styles.readmore}>
         <button>read more</button>
       </div>
     </div>

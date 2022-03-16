@@ -1,18 +1,18 @@
 import img from "../../images/avatar.png";
-import "./UpdateAccount.css";
+import styles from "./UpdateAccount.module.css";
 function UpdateAccount() {
   return (
-    <div className="infoContainer">
+    <div className={styles.infoContainer}>
       <h2>Edit your Account</h2>
-      <div className="profilImgContainer">
+      <div className={styles.profilImgContainer}>
         <img src={img} alt="" />
         <input type="file" id="imgUpload" />
         <label htmlFor="imgUpload">
           change profil image : <i className="fa-solid fa-images"></i>
         </label>
       </div>
-      <form action="" className="accountInfo">
-        <div className="name_email">
+      <form action="" className={styles.accountInfo}>
+        <div className={styles.name_email}>
           <h2>Account Inforamtion</h2>
 
           <label htmlFor="firstName">First Name</label>
@@ -24,7 +24,7 @@ function UpdateAccount() {
           <label htmlFor="email">Email</label>
           <input type="email" id="email" placeholder="example@host.com" />
         </div>
-        <div className="password">
+        <div className={styles.password}>
           <h2>Change Password</h2>
 
           <label htmlFor="password">Password</label>
