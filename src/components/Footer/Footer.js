@@ -2,9 +2,7 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <div className={styles.container}>
-      <p>
-        Created with <i className="fa-solid fa-heart"></i> by ghaith mlika
-      </p>
+      <p>Created by ghaith mlika 2021/2022</p>
     </div>
   );
 }

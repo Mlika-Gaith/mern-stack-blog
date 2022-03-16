@@ -7,7 +7,9 @@ function Form() {
       <input type="email" id="email" placeholder="example@host.com" />
       <label htmlFor="password">Password</label>
       <input type="password" id="password" placeholder="password" />
-      <FormButton btnText={"login"} spanText={"register now"} />
+      <div className="btn-container">
+        <FormButton btnText={"login"} spanText={"register now"} />
+      </div>
     </form>
   );
 }

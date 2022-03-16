@@ -19,7 +19,9 @@ function Form() {
       <input type="password" placeholder="password" id="password" />
       <label htmlFor="password2">confirm password</label>
       <input type="password" placeholder="confirm password" id="password2" />
-      <FormButton btnText={"register"} spanText={"or login"} />
+      <div className="btn-container">
+        <FormButton btnText={"register"} spanText={"or login"} />
+      </div>
     </form>
   );
 }

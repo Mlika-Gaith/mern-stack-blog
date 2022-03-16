@@ -12,10 +12,10 @@ form label {
   text-transform: capitalize;
 }
 form input {
-  padding: 18px;
+  padding: 12px 16px;
   width: 70%;
   border: 1px solid #2b2d42;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #2b2d42;
   font-family: "Lora", serif;
   font-size: 16px;
@@ -43,4 +43,9 @@ form input {
 .name:last-child {
   padding-left: 20px;
   padding-right: 20px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
