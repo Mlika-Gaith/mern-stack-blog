@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 function NavBar() {
-  let user = true;
+  let user = false;
   return (
     <div className="top">
       <div className="topLeft">
@@ -40,7 +40,9 @@ function NavBar() {
             <i className="fa-solid fa-user-gear"></i>
           </NavLink>
         ) : (
-          <button>hello</button>
+          <NavLink to="/login">
+            <button className="login_btn">Login</button>
+          </NavLink>
         )}
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>

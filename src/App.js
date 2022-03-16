@@ -8,7 +8,7 @@ import Register from "./pages/register/Register";
 import UpdateAccount from "./pages/account/UpdateAccount";
 
 function App() {
-  let user = true;
+  let user = false;
   return (
     <>
       <NavBar />
