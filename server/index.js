@@ -6,5 +6,8 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 dotenv.config();
-mongoose.connect(process.env.MONGO_URL).then(console.log("connected to db"));
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(console.log("connected to db"))
+  .catch((err) => console.log(err));
 app.listen("8080", () => console.log("server running"));
