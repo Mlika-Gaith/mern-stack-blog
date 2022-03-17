@@ -7,6 +7,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import UpdateAccount from "./pages/account/UpdateAccount";
 import About from "./pages/about/about";
+import NoMatch from "./pages/404/nomatch";
 
 function App() {
   let user = true;
@@ -29,6 +30,7 @@ function App() {
         )}
         <Route path="/settings" element={<UpdateAccount />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
       <Footer />
     </>

@@ -1,0 +1,27 @@
+.nomatch {
+  margin: 20px 0px;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nomatch img {
+  width: 600px;
+  margin: 0px 10px;
+}
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Inconsolata", monospace;
+  color: #001219;
+  padding: 50px 0px 40px 100px;
+}
+.titleSm {
+  font-size: 40px;
+  font-family: "Indie Flower", cursive;
+}
+.titleLg {
+  font-size: 100px;
+  text-transform: uppercase;
+}
