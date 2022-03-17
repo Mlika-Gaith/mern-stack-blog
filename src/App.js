@@ -6,6 +6,7 @@ import Write from "./pages/write/Write";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import UpdateAccount from "./pages/account/UpdateAccount";
+import About from "./pages/about/about";
 
 function App() {
   let user = false;
@@ -27,6 +28,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         )}
         <Route path="/settings" element={<UpdateAccount />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>
