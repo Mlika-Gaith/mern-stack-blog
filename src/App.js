@@ -9,7 +9,7 @@ import UpdateAccount from "./pages/account/UpdateAccount";
 import About from "./pages/about/about";
 
 function App() {
-  let user = false;
+  let user = true;
   return (
     <>
       <NavBar />

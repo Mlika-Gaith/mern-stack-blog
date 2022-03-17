@@ -3,14 +3,11 @@ import styles from "./Login.module.css";
 function Login() {
   return (
     <div className={styles.container}>
-      <div className={styles.loginForm}>
-        <div className={styles.imgContainer}>
-          <h2>Poly Blog</h2>
-          <h3>Personal students blog</h3>
-        </div>
-        <div className={styles.formContainer}>
-          <Form />
-        </div>
+      <div className={styles.text_container}>
+        <h3>Sign in</h3>
+      </div>
+      <div className={styles.form_container}>
+        <Form />
       </div>
     </div>
   );

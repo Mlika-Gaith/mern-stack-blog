@@ -60,7 +60,7 @@
   opacity: 0.8;
 }
 .singlePostDescription {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inconsolata", monospace;
   color: #001219;
   font-size: 25px;
   margin: 20px;

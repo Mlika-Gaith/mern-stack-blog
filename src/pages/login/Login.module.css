@@ -1,47 +1,35 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loginForm {
-  margin: 100px;
-  width: 60%;
+  margin: 100px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.2);
-}
-.imgContainer {
-  background-image: url(../../images/blog_cover.jpg);
-  background-position: center center;
-  width: 70%;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  /*border-radius: 8px;
+  box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.2);*/
 }
-.imgContainer h3,
-h2 {
-  font-family: "Inconsolata", monospace;
-  color: #001219;
-  padding: 10px;
-  text-transform: capitalize;
-}
-h2 {
-  font-size: 60px;
-}
-h3 {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
-}
-.formContainer {
-  width: 40%;
+.form_container {
+  padding: 20px;
   background-color: #ffffff;
-  height: 600px;
+  height: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: none;
+  border-radius: 2px;
+  box-shadow: -0.5em 1em 4em rgba(0, 0, 0, 0.2);
+}
+.text_container {
+  padding: 10px 20px;
+  text-align: center;
+}
+.text_container h3 {
+  color: #2b2d42;
+  font-family: "Lora", serif;
+  text-transform: capitalize;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.2);
 }

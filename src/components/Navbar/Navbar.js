@@ -1,7 +1,7 @@
 import styles from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
 function NavBar() {
-  let user = false;
+  let user = true;
   return (
     <div className={styles.top}>
       <div className={styles.topLeft}>
@@ -46,7 +46,7 @@ function NavBar() {
       </div>
       <div className={styles.topRight}>
         {user ? (
-          <NavLink to="/settings">
+          <NavLink to="/settings" className={styles.nav_link}>
             <i className="fa-solid fa-user-gear"></i>
           </NavLink>
         ) : (

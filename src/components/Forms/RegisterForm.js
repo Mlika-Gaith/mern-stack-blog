@@ -1,8 +1,7 @@
 import styles from "./Form.module.css";
-import FormButton from "./../Buttons/FormButton";
 function Form() {
   return (
-    <form action="" className={styles.login_form}>
+    <form action="" className={styles.form}>
       <label htmlFor="firstName">First Name</label>
       <input type="text" id="firstName" placeholder="first name" />
 
@@ -15,8 +14,9 @@ function Form() {
       <input type="password" placeholder="password" id="password" />
       <label htmlFor="password2">confirm password</label>
       <input type="password" placeholder="confirm password" id="password2" />
-      <div className={styles.btn_container}>
-        <FormButton btnText={"register"} spanText={"or login"} />
+      <button className={styles.register}>Sign up</button>
+      <div className={styles.link_container}>
+        <span>sign in</span>
       </div>
     </form>
   );
