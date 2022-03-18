@@ -2,12 +2,28 @@
 // * install and use nodemon for a responsive server
 const express = require("express");
 const app = express();
-// * adding mongodb url
+
+// * adding mongodb and dotenv
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 dotenv.config();
+
+// * routes
+const authRoute = require("./routes/auth");
+
+//using json
+app.use(express.json());
+
+// * connecting to mongodb
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then(console.log("connected to db"))
   .catch((err) => console.log(err));
-app.listen("8080", () => console.log("server running"));
+// ? auth route
+
+app.use("/", authRoute);
+app.listen("8081", () => console.log("server running"));
