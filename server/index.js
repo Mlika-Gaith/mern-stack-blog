@@ -10,6 +10,7 @@ dotenv.config();
 
 // * routes
 const authRoute = require("./routes/auth");
+const usersRoute = require("./routes/users");
 
 //using json
 app.use(express.json());
@@ -26,4 +27,5 @@ mongoose
 // ? auth route
 
 app.use("/", authRoute);
+app.use("/users", usersRoute);
 app.listen("8081", () => console.log("server running"));
