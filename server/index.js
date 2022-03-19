@@ -12,6 +12,7 @@ dotenv.config();
 const authRoute = require("./routes/auth");
 const usersRoute = require("./routes/users");
 const postsRoute = require("./routes/posts");
+const categoryRoute = require("./routes/categories");
 
 //using json
 app.use(express.json());
@@ -30,4 +31,5 @@ mongoose
 app.use("/", authRoute);
 app.use("/users", usersRoute);
 app.use("/posts", postsRoute);
+app.use("/categories", categoryRoute);
 app.listen("8081", () => console.log("server running"));
