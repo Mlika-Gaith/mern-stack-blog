@@ -8,6 +8,7 @@ import Register from "./pages/register/Register";
 import UpdateAccount from "./pages/account/UpdateAccount";
 import About from "./pages/about/about";
 import NoMatch from "./pages/404/nomatch";
+import SinglePostPage from "./pages/post/SinglePostPage";
 
 function App() {
   let user = true;
@@ -31,6 +32,7 @@ function App() {
         <Route path="/settings" element={<UpdateAccount />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NoMatch />} />
+        <Route path="/post/:id" element={<SinglePostPage />} />
       </Routes>
       <Footer />
     </>

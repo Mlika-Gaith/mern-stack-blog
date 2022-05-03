@@ -2,6 +2,7 @@
 // * install and use nodemon for a responsive server
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 // * adding mongodb and dotenv
 const dotenv = require("dotenv");
@@ -44,6 +45,8 @@ app.post("/file/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
+// Protect from cross origin error
+app.use(cors());
 app.use("/", authRoute);
 app.use("/users", usersRoute);
 app.use("/posts", postsRoute);

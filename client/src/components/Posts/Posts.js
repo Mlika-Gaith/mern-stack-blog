@@ -1,12 +1,11 @@
 import Post from "../Post/Post";
 import "./Posts.css";
-function Posts() {
+function Posts(props) {
   return (
     <div className="posts">
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {props.posts.map((p) => (
+        <Post post={p} />
+      ))}
     </div>
   );
 }
