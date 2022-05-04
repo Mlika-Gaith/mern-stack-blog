@@ -11,7 +11,7 @@ import NoMatch from "./pages/404/nomatch";
 import SinglePostPage from "./pages/post/SinglePostPage";
 
 function App() {
-  let user = true;
+  let user = false;
   return (
     <>
       <NavBar />

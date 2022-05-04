@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 function SinglePostPage() {
   const params = useParams();
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState([]);
   // whenever the path changes (the id in the url) fire this useState
   useEffect(() => {
     const getPost = async () => {
@@ -14,6 +14,7 @@ function SinglePostPage() {
         "http://localhost:8081/posts/" + params.id
       );
       setPost(response.data);
+      console.log(response.data);
     };
     getPost();
   }, [params.id]);

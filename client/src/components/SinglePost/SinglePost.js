@@ -32,9 +32,15 @@ function SinglePost(props) {
         <p className="singlePostDescription">{props.post.description}</p>
         <div className="singlePostCategories">
           <p>categories :</p>
-          {props.post.categories.map((category) => (
-            <div className="singlePostCategory">{category.title}</div>
-          ))}
+          {props.post.categories ? (
+            props.post.categories.map((category, i) => (
+              <div className="singlePostCategory" key={i}>
+                {category.title}
+              </div>
+            ))
+          ) : (
+            <div className="singlePostCategory">None</div>
+          )}
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import styles from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
 function NavBar() {
-  let user = true;
+  let user = false;
   return (
     <div className={styles.top}>
       <div className={styles.topLeft}>

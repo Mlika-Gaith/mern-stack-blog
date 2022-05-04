@@ -19,8 +19,10 @@ function Post(props) {
       </p>
       <p className={styles.postDescription}>{props.post.description}</p>
       <div className={styles.postCategories}>
-        {props.post.categories.map((category) => (
-          <div className={styles.postCategory}>{category.title}</div>
+        {props.post.categories.map((category, i) => (
+          <div className={styles.postCategory} key={i}>
+            {category.title}
+          </div>
         ))}
       </div>
       <div className={styles.readmore}>
