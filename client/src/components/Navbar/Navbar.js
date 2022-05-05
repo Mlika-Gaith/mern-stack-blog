@@ -1,7 +1,13 @@
 import styles from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./../../context/Context";
 function NavBar() {
-  let user = false;
+  const { user, dispatch } = useContext(Context);
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
   return (
     <div className={styles.top}>
       <div className={styles.topLeft}>
@@ -36,7 +42,9 @@ function NavBar() {
           )}
 
           {user ? (
-            <li className={styles.topListItem}>Logout</li>
+            <li className={styles.topListItem} onClick={handleLogout}>
+              Logout
+            </li>
           ) : (
             <NavLink to="/register" className={styles.nav_link}>
               <li className={styles.topListItem}>Register</li>

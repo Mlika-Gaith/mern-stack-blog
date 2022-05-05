@@ -9,9 +9,11 @@ import UpdateAccount from "./pages/account/UpdateAccount";
 import About from "./pages/about/about";
 import NoMatch from "./pages/404/nomatch";
 import SinglePostPage from "./pages/post/SinglePostPage";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  let user = false;
+  const { user } = useContext(Context);
   return (
     <>
       <NavBar />
