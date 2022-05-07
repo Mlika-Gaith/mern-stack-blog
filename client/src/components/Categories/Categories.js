@@ -1,55 +1,54 @@
 import "./Categories.css";
-function Categories() {
+import { useState } from "react";
+function Categories(props) {
+  const categories = [
+    "tech",
+    "sports",
+    "culture",
+    "science",
+    "student life",
+    "entertainement",
+    "certifications",
+    "camping",
+    "social media",
+    "leadership",
+    "arts",
+    "academic",
+  ];
+  const [checkedState, setCheckedSate] = useState(
+    new Array(categories.length).fill(false)
+  );
+  const handleChange = (position) => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      index === position ? !item : item
+    );
+    setCheckedSate(updatedCheckedState);
+    console.log(updatedCheckedState);
+    let cats = [];
+    for (var key in updatedCheckedState) {
+      if (updatedCheckedState[key] === true) {
+        cats.push(categories[key]);
+      }
+    }
+    props.categories(cats);
+  };
+
   return (
     <ul className="categories">
-      <li className="category">
-        <input type="checkbox" id="checkboxOne" value="tech" />
-        <label htmlFor="checkboxOne">Tech</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxTwo" value="sports" />
-        <label htmlFor="checkboxTwo">Sports</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxThree" value="culture" />
-        <label htmlFor="checkboxThree">Culture</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxFour" value="science" />
-        <label htmlFor="checkboxFour">Science</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxFive" value="student life" />
-        <label htmlFor="checkboxFive">Student life</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxSix" value="entertainement" />
-        <label htmlFor="checkboxSix">Entertainement</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxSeven" value="certifications" />
-        <label htmlFor="checkboxSeven">Certifications</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxEight" value="Camping" />
-        <label htmlFor="checkboxEight">Camping</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxNine" value="social media" />
-        <label htmlFor="checkboxNine">Social media</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxTen" value="leadership" />
-        <label htmlFor="checkboxTen">Leadership</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxEleven" value="arts" />
-        <label htmlFor="checkboxEleven">Arts</label>
-      </li>
-      <li className="category">
-        <input type="checkbox" id="checkboxTwelve" value="academic" />
-        <label htmlFor="checkboxTwelve">Academic</label>
-      </li>
+      {categories.map((item, index) => {
+        return (
+          <li className="category" key={index}>
+            <input
+              type="checkbox"
+              id={"checkbox" + index}
+              value={item}
+              checked={checkedState[index]}
+              onChange={() => handleChange(index)}
+            />
+            <label htmlFor={"checkbox" + index}>{item}</label>
+          </li>
+        );
+      })}
     </ul>
   );
 }

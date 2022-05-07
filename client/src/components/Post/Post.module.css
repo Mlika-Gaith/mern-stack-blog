@@ -13,6 +13,7 @@
   width: 100%;
   object-fit: cover;
   margin: 10px;
+  max-height: 300px;
 }
 .post h4 {
   font-family: "Lora", serif;

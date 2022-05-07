@@ -2,11 +2,13 @@ import styles from "./Post.module.css";
 import postImg from "../../images/post1.png";
 import { Link } from "react-router-dom";
 function Post(props) {
+  const PF = "http://localhost:8081/images/";
+  console.log(PF + props.post.postPicture);
   return (
     <div className={styles.post}>
       <h4>{props.post.title}</h4>
       {props.post.postPicture ? (
-        <img src={props.post.postPicture} alt="" />
+        <img src={PF + props.post.postPicture} alt="" />
       ) : (
         <img src={postImg} alt="" />
       )}
@@ -21,7 +23,7 @@ function Post(props) {
       <div className={styles.postCategories}>
         {props.post.categories.map((category, i) => (
           <div className={styles.postCategory} key={i}>
-            {category.title}
+            {category}
           </div>
         ))}
       </div>

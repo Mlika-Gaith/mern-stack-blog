@@ -1,12 +1,13 @@
 import "./SinglePost.css";
 import postImg from "../../images/post1.png";
 function SinglePost(props) {
+  const PF = "http://localhost:8081/images/";
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
         <div className="singlePostImg">
           {props.post.postPicture ? (
-            <img src={props.post.postPicture} alt="post pic" />
+            <img src={PF + props.post.postPicture} alt="post pic" />
           ) : (
             <img src={postImg} alt="post pic" />
           )}
@@ -35,7 +36,7 @@ function SinglePost(props) {
           {props.post.categories ? (
             props.post.categories.map((category, i) => (
               <div className="singlePostCategory" key={i}>
-                {category.title}
+                {category}
               </div>
             ))
           ) : (

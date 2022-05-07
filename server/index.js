@@ -4,6 +4,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+// Protect from cross origin error
+app.use(cors());
+
 // * adding mongodb and dotenv
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
@@ -18,8 +21,12 @@ const usersRoute = require("./routes/users");
 const postsRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 
-//using json
+// * using json
 app.use(express.json());
+
+// * adding uploaded images path
+const path = require("path");
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // * connecting to mongodb
 mongoose
@@ -37,7 +44,7 @@ const storage = multer.diskStorage({
     cb(null, "images");
   },
   filename: (req, file, cb) => {
-    cb(null, "hello.jpeg");
+    cb(null, req.body.name);
   },
 });
 const upload = multer({ storage: storage });
@@ -45,8 +52,6 @@ app.post("/file/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
-// Protect from cross origin error
-app.use(cors());
 app.use("/", authRoute);
 app.use("/users", usersRoute);
 app.use("/posts", postsRoute);
