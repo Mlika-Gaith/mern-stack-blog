@@ -2,6 +2,7 @@ import styles from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./../../context/Context";
+import index from "../../images/index.png";
 function NavBar() {
   const { user, dispatch } = useContext(Context);
   const handleLogout = () => {
@@ -11,9 +12,7 @@ function NavBar() {
   return (
     <div className={styles.top}>
       <div className={styles.topLeft}>
-        <i className="fa-brands fa-github"></i>
-        <i className="fa-brands fa-linkedin"></i>
-        <i className="fa-brands fa-facebook"></i>
+        <img src={index} alt="logo" />
       </div>
       <div className={styles.topCenter}>
         <ul className={styles.topList}>
@@ -55,14 +54,15 @@ function NavBar() {
       <div className={styles.topRight}>
         {user ? (
           <NavLink to="/settings" className={styles.nav_link}>
-            <i className="fa-solid fa-user-gear"></i>
+            <ul className={styles.topList}>
+              <li className={styles.topListItem}>My Account</li>
+            </ul>
           </NavLink>
         ) : (
           <NavLink to="/login">
             <button className={styles.login_btn}>Login</button>
           </NavLink>
         )}
-        <i className="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
   );

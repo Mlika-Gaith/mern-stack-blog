@@ -13,7 +13,7 @@ h2 {
   padding: 20px;
 }
 .profilImgContainer {
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: baseline;
   margin: 20px;
@@ -34,6 +34,30 @@ h2 {
   font-family: "Lora", serif;
   cursor: pointer;
   padding: 10px;
+}
+.bioArea{
+  align-self: flex-start;
+  width:50%;
+  height: 50%;
+  margin-top:20px;
+  margin-left: 20px;
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.bioArea textarea{
+  width:90%;
+  height: 100px;
+  padding: 20px;
+  border: 1px solid #2b2d42;
+  border-radius: 10px;
+  font-family: "Lora", serif;
+  color: #2b2d42;
+  box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: ease 0.3s;
 }
 .accountInfo {
   display: flex;
@@ -91,4 +115,11 @@ label {
 .accountInfo button:hover {
   background-color: #ffffff;
   color: #2b2d42;
+}
+.success{
+  padding:30px;
+  font-family: "Lora", serif;
+  text-transform: capitalize;
+  font-size: 15px;
+  color:#76c893;
 }

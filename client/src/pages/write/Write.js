@@ -4,6 +4,7 @@ import Categories from "../../components/Categories/Categories";
 import { useState, useContext } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Write() {
   const { user } = useContext(Context);
@@ -11,6 +12,7 @@ function Write() {
   const [description, setDescription] = useState("");
   const [file, setFile] = useState("");
   const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
   const handleCategories = (cats) => {
     setCategories(cats);
   };
@@ -45,6 +47,7 @@ function Write() {
           "http://localhost:8081/posts/post",
           newPost
         );
+        navigate("/");
         console.log(response);
       } else {
         let choice = window.confirm("Add post without post picture ?");

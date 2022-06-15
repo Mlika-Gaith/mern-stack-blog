@@ -1,13 +1,14 @@
 .post {
   box-sizing: border-box;
   width: 47%;
-  height: 50%;
+  /*height: 50%;*/
   padding: 25px;
   background-color: #f8f9fa;
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0.1em -0.2em 2em rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  height: 850px;
 }
 .post img {
   width: 100%;
@@ -35,10 +36,10 @@
   overflow: hidden;
 }
 .postDate {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Inconsolata", monospace;
   color: #adb5bd;
-  margin: 20px;
+  margin: 15px;
 }
 .postCategories {
   display: flex;

@@ -1,12 +1,14 @@
 import styles from "./Form.module.css";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function Form() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     // when clicking submit prevent page from refreching
@@ -30,7 +32,8 @@ function Form() {
             email,
             password,
           });
-          console.log(response);
+          //console.log(response);
+          navigate("/login");
         } catch (error) {
           setError(error.response.data);
         }

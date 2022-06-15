@@ -100,3 +100,66 @@
   font-size: 14px;
   color: #ffffff;
 }
+.singlePostTitleInput{
+  padding:20px;
+  width:90%;
+  border:none;
+  outline:none;
+  font-family: "Roboto", sans-serif;
+  color: #001219;
+  text-transform: capitalize;
+  font-size: 45px;
+}
+.singlePostTitleInput:focus{
+  border-bottom: 1px solid #2b2d42;
+}
+.singlePostDescriptionInput{
+  font-family: "Inconsolata", monospace;
+  color: #001219;
+  font-size: 25px;
+  width:90%;
+  margin: 30px;
+  text-align: justify;
+  line-height: 30px;
+  border: none;
+  outline: none;
+}
+.singlePostDescriptionInput:focus{
+  border:1px solid #2b2d42;
+}
+.submitArea{
+  padding:30px;
+  width:90%;
+  display:flex;
+  justify-content: flex-end;
+}
+.submitBtn{
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #ffffff;
+  border: 2px solid #2b2d42;
+  background-color: #2b2d42;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.submitBtn:hover{
+  background-color: #3d405b;
+}
+.comments{
+  margin-top:50px;
+  padding:30px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.comments p{
+  font-family: "Inconsolata", monospace;
+  font-size: 25px;
+  opacity: 0.9;
+  color: #495057;
+  margin-right: 20px;
+  text-transform: capitalize;
+}

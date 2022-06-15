@@ -18,10 +18,14 @@
   align-items: center;
   justify-content: center;
 }
-.topLeft i {
-  font-size: 25px;
+.topLeft{
+  overflow: hidden;
+}
+.topLeft img {
   margin-right: 10px;
+  height:80px;
   cursor: pointer;
+
 }
 .topCenter {
   flex: 6;
@@ -63,4 +67,7 @@
 .nav_link {
   text-decoration: none;
   color: inherit;
+}
+li{
+  list-style: none;  
 }

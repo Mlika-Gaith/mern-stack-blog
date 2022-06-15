@@ -1,7 +1,10 @@
 import styles from "./Post.module.css";
 import postImg from "../../images/post1.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 function Post(props) {
+  const { user } = useContext(Context);
   const PF = "http://localhost:8081/images/";
   console.log(PF + props.post.postPicture);
   return (
@@ -29,12 +32,21 @@ function Post(props) {
       </div>
       <div className={styles.readmore}>
         <button>
-          <Link
-            to={"/post/" + props.post._id}
-            style={{ textDecoration: "inherit", color: "inherit" }}
-          >
-            read more
-          </Link>
+          {user ? (
+            <Link
+              to={"/post/" + props.post._id}
+              style={{ textDecoration: "inherit", color: "inherit" }}
+            >
+              read more
+            </Link>
+          ) : (
+            <Link
+              to={"/login/"}
+              style={{ textDecoration: "inherit", color: "inherit" }}
+            >
+              read more
+            </Link>
+          )}
         </button>
       </div>
     </div>
