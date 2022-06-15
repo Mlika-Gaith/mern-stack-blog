@@ -163,3 +163,11 @@
   margin-right: 20px;
   text-transform: capitalize;
 }
+.nocomment{
+  font-family: "Lora", serif;
+    font-size: 18px;
+    color: #001219;
+    text-transform: capitalize;
+    padding:10px;
+    margin: 30px 0px;
+}

@@ -1,9 +1,9 @@
 import "./SinglePost.css";
 import postImg from "../../images/post1.png";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "./../../context/Context";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Categories from "../Categories/Categories";
 import AddComment from "../AddComment/AddComment";
 import Comment from "../Comment/SingleComment";
@@ -15,6 +15,22 @@ function SinglePost(props) {
   const [title, setTitle] = useState(props.post.title);
   const [description, setDescription] = useState(props.post.description);
   const PF = "http://localhost:8081/images/";
+  const params = useParams();
+  // fetch comments
+  const [comments, setComments] = useState([]);
+  useEffect(() => {
+    async function fetchComments() {
+      try {
+        let response = await axios.get(
+          "http://localhost:8081/comments/" + params.id
+        );
+        setComments(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchComments();
+  }, []);
 
   const handleTuggle = () => {
     setUpdate(!update);
@@ -142,9 +158,13 @@ function SinglePost(props) {
         )}
         <div className="comments">
           <p>Comments :</p>
-          <AddComment />
+          <AddComment post={props.post._id} user={user} />
           <p>other comments :</p>
-          <Comment />
+          {comments.length > 0 ? (
+            comments.map((comment, i) => <Comment comment={comment} />)
+          ) : (
+            <div className="nocomment">No comments posted Yet.</div>
+          )}
         </div>
       </div>
     </div>

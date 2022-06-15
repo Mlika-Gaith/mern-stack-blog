@@ -40,7 +40,6 @@ function UpdateAccount() {
               "http://localhost:8081/file/upload/",
               data
             );
-            //console.log(response);
           } catch (error) {
             console.log(error);
           }
@@ -52,9 +51,10 @@ function UpdateAccount() {
           );
           setSuccess(true);
           const newUser = {
+            userId: response.data._id,
             username: response.data.username,
             email: response.data.email,
-            lastName: response.data.email,
+            lastName: response.data.lastName,
             firstName: response.data.firstName,
             profilPicture: response.data.profilPicture,
             createdAt: response.data.createdAt,
@@ -89,13 +89,6 @@ function UpdateAccount() {
         <label htmlFor="imgUpload">
           change profil image : <i className="fa-solid fa-images"></i>
         </label>
-        <div className={styles.bioArea}>
-          <h2>Add your personal Bio</h2>
-          <textarea
-            placeholder="add a personal bio"
-            className="bioArea"
-          ></textarea>
-        </div>
       </div>
       <form action="" className={styles.accountInfo} onSubmit={handleSubmit}>
         <div className={styles.name_email}>

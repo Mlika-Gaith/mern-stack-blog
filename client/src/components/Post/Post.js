@@ -6,7 +6,6 @@ import { Context } from "../../context/Context";
 function Post(props) {
   const { user } = useContext(Context);
   const PF = "http://localhost:8081/images/";
-  console.log(PF + props.post.postPicture);
   return (
     <div className={styles.post}>
       <h4>{props.post.title}</h4>

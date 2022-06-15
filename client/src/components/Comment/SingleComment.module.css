@@ -20,6 +20,7 @@
     display:flex;
     flex-direction: column;
     margin:30px 0px;
+    width:70%;
 }
 .comment_header{
     display:flex;
@@ -43,4 +44,21 @@
     font-size: 16px;
     color: #001219;
     text-transform: lowercase;
+}
+.deleteComment{
+    width:110%;
+    margin-top: 20px;
+    padding:10px 0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.deleteComment i{
+    color: #ccc5b9;
+    cursor:pointer;
+    transition: ease 0.4s;
+}
+.deleteComment i:hover{
+    transform: scale(1.5);
+    color:#e63946;
 }

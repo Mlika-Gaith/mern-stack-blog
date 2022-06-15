@@ -20,6 +20,7 @@ const authRoute = require("./routes/auth");
 const usersRoute = require("./routes/users");
 const postsRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
+const commentRoute = require("./routes/comments");
 
 // * using json
 app.use(express.json());
@@ -57,4 +58,5 @@ app.use("/", authRoute);
 app.use("/users", usersRoute);
 app.use("/posts", postsRoute);
 app.use("/categories", categoryRoute);
+app.use("/comments", commentRoute);
 app.listen("8081", () => console.log("server running"));

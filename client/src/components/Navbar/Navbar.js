@@ -1,12 +1,14 @@
 import styles from "./NavBar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./../../context/Context";
 import index from "../../images/index.png";
 function NavBar() {
   const { user, dispatch } = useContext(Context);
+  const navigate = useNavigate();
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+    navigate("/");
   };
 
   return (

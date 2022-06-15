@@ -17,7 +17,6 @@ function SinglePostPage() {
         "http://localhost:8081/posts/" + params.id
       );
       setPost(response.data);
-      console.log(response.data);
     };
     getPost();
   }, [params.id]);
