@@ -6,6 +6,7 @@
     align-items: flex-start;
     flex-direction: row;
     width:70%;
+    max-width: 780px;
 }
 .img_container{
     padding:30px;

@@ -12,7 +12,10 @@ export default function Comment() {
           <p>18th september, 2021</p>
         </div>
         <div className={styles.comment_text}>
-          <p>this is awesoome text baby</p>
+          <p>
+            this is awesoome text baby hello hello hello hello
+            hdhdjhdjhjdhjdjdjjdhjdhjdhjdhjhdjdhj
+          </p>
         </div>
       </div>
     </div>
