@@ -38,6 +38,23 @@ router.put("/post/:id", async (req, res) => {
   }
 });
 
+// update post username
+router.post("/post/username", async (req, res) => {
+  try {
+    const old_username = req.body.old_username;
+    const new_username = req.body.username;
+    console.log(old_username);
+    console.log(new_username);
+    await Post.updateMany(
+      { username: old_username },
+      { $set: { username: new_username } }
+    );
+    res.status(200).json("Posts usernames updated");
+  } catch (err) {
+    res.status(500).json("Posts usernames update failed.");
+  }
+});
+
 // Delete post
 router.delete("/delete/:id", async (req, res) => {
   try {

@@ -17,6 +17,7 @@ function UpdateAccount() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const old_username = user.username;
     dispatch({ type: "UPDATE_START" });
     const updatedUser = {
       userId: user._id,
@@ -50,6 +51,16 @@ function UpdateAccount() {
             updatedUser
           );
           setSuccess(true);
+          //perform update posts and comments here
+          /* update posts' username*/
+          try {
+            await axios.post("http://localhost:8081/posts/post/username", {
+              old_username: old_username,
+              username: username,
+            });
+          } catch (err) {
+            console.log(err);
+          }
           const newUser = {
             userId: response.data._id,
             username: response.data.username,
