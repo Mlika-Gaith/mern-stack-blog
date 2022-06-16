@@ -18,6 +18,7 @@ function UpdateAccount() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const old_username = user.username;
+    const old_profil_picture = user.profilPicture;
     dispatch({ type: "UPDATE_START" });
     const updatedUser = {
       userId: user._id,
@@ -57,6 +58,17 @@ function UpdateAccount() {
             await axios.post("http://localhost:8081/posts/post/username", {
               old_username: old_username,
               username: username,
+            });
+          } catch (err) {
+            console.log(err);
+          }
+          /* update user comments here*/
+          try {
+            await axios.post("http://localhost:8081/comments/comment/update", {
+              old_username: old_username,
+              new_username: username,
+              old_profil_picture: old_profil_picture,
+              new_profil_picture: updatedUser.profilPicture,
             });
           } catch (err) {
             console.log(err);

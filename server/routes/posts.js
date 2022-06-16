@@ -43,8 +43,6 @@ router.post("/post/username", async (req, res) => {
   try {
     const old_username = req.body.old_username;
     const new_username = req.body.username;
-    console.log(old_username);
-    console.log(new_username);
     await Post.updateMany(
       { username: old_username },
       { $set: { username: new_username } }

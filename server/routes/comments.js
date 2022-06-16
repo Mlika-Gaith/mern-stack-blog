@@ -24,6 +24,8 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// deleting comments
 router.delete("/delete/:id", async (req, res) => {
   try {
     const comment = await Comment.findById(req.params.id);
@@ -41,5 +43,24 @@ router.delete("/delete/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// updating comments ownership
+router.post("/comment/update", async (req, res) => {
+  try {
+    const old_username = req.body.old_username;
+    const new_username = req.body.new_username;
+    const old_profil_picture = req.body.old_profil_picture;
+    const new_profil_picture = req.body.new_profil_picture;
+    await Comment.updateMany(
+      { username: old_username },
+      { $set: { username: new_username } }
+    );
+    await Comment.updateMany(
+      { profilPicture: old_profil_picture },
+      { $set: { profilPicture: new_profil_picture } }
+    );
+    res.status(200).json("Comments updated.");
+  } catch (err) {
+    res.status(500).json("Error updating comments.");
+  }
+});
 module.exports = router;
