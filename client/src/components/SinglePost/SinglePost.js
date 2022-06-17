@@ -56,16 +56,22 @@ function SinglePost(props) {
     setCategories(cats);
   };
   const handleUpdate = async () => {
-    try {
-      await axios.put("http://localhost:8081/posts/post/" + props.post._id, {
-        username: user.username,
-        title,
-        description,
-        categories,
-      });
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
+    if (title && description && categories.length <= 4) {
+      try {
+        await axios.put("http://localhost:8081/posts/post/" + props.post._id, {
+          username: user.username,
+          title,
+          description,
+          categories,
+        });
+        window.location.reload();
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      window.alert(
+        "You must add title description and you can't add more than 4 categories."
+      );
     }
   };
   return (
@@ -157,7 +163,6 @@ function SinglePost(props) {
           </div>
         )}
         <div className="comments">
-          <p>Comments :</p>
           <AddComment post={props.post._id} user={user} />
           <p>other comments :</p>
           {comments.length > 0 ? (

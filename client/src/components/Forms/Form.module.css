@@ -1,10 +1,10 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px 30px 60px 30px;
   justify-content: center;
   background:#f0f3f6;
-  max-width: 600px;
+  max-width: 500px;
 }
 .form label {
   padding: 10px;
@@ -16,7 +16,8 @@
 }
 .form input {
   padding: 12px 16px;
-  width: 80%;
+  width: 400px;
+  max-width: 400px;
   border: 1px solid #2b2d42;
   border-radius: 4px;
   color: #2b2d42;
@@ -27,29 +28,10 @@
   transition: ease 0.3s;
   margin-bottom: 10px;
 }
-.register {
-  width: 87%;
-  margin-top: 40px;
-  padding: 15px 18px;
-  margin-bottom: 20px;
-  font-family: "Lora", serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  outline: none;
-  border: 1px solid #2b2d42;
-  border-radius: 5px;
-  color: #ffffff;
-  background-color: #2b2d42;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.register:hover{
-  background-color: #3d405b;
-
-}
-.login{
-  width: 92%;
-  margin-top: 40px;
+.form_btn{
+  width: 400px;
+  max-width: 400px;
+  margin: 40px 0px 20px 0px;
   padding: 15px 18px;
   font-family: "Lora", serif;
   text-transform: uppercase;
@@ -62,10 +44,10 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-.login:hover{
+.form_btn:hover{
   background-color: #3d405b;
 }
-.login:disabled{
+.form_btn:disabled{
   cursor: not-allowed;
   background-color: gray;
 }
@@ -77,18 +59,13 @@
   cursor: pointer;
   
 }
-.errorContainer{
-  background-color: #ffafcc;
-  padding:30px;
-  width:80%;
-  margin:10px 0px;
+.error_container{
+  width:400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #e63946;
-  border-radius:5px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
-.errorContainer span, .errorContainerLogin span{
+.error_container span{
   color: #e63946;
   font-family: "Lora", serif;
   font-size: 18px;
@@ -97,15 +74,4 @@
 
 }
 
-.errorContainerLogin{
-  background-color: #ffafcc;
-  padding:30px;
-  width:75%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #e63946;
-  border-radius:5px;
-  margin-bottom: 10px;
-}
 

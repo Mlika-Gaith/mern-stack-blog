@@ -25,7 +25,7 @@ function Form() {
   return (
     <form action="" className={styles.form} onSubmit={handleSubmit}>
       {error ? (
-        <div className={styles.errorContainerLogin}>
+        <div className={styles.error_container}>
           <span>{error}</span>
         </div>
       ) : null}
@@ -38,7 +38,7 @@ function Form() {
         placeholder="password"
         ref={passwordRef}
       />
-      <button className={styles.login} type="submit" disabled={isFetching}>
+      <button className={styles.form_btn} type="submit" disabled={isFetching}>
         Sign in
       </button>
     </form>

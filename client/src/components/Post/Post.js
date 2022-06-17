@@ -30,7 +30,7 @@ function Post(props) {
         ))}
       </div>
       <div className={styles.readmore}>
-        <button>
+        <p>
           {user ? (
             <Link
               to={"/post/" + props.post._id}
@@ -46,7 +46,7 @@ function Post(props) {
               read more
             </Link>
           )}
-        </button>
+        </p>
       </div>
     </div>
   );

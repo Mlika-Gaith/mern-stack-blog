@@ -1,26 +1,29 @@
 .post {
   box-sizing: border-box;
-  width: 47%;
-  /*height: 50%;*/
+  width: 450px;
+  max-width: 480px;
   padding: 25px;
   background-color: #f8f9fa;
-  margin: 20px;
+  margin: 20px 10px;
   border-radius: 10px;
   box-shadow: 0.1em -0.2em 2em rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 850px;
+  height: 700px;
+  max-height:700px;
 }
 .post img {
-  width: 100%;
+  width: 380px;
+  max-width: 380px;
   object-fit: cover;
   margin: 10px;
-  max-height: 300px;
+  height: 200px;
+  max-height: 200px;
 }
 .post h4 {
   font-family: "Lora", serif;
   color: #001219;
   text-transform: capitalize;
-  font-size: 35px;
+  font-size: 30px;
   margin: 10px;
 }
 .postDescription {
@@ -29,17 +32,18 @@
   font-size: 20px;
   margin: 20px;
   text-align: justify;
-  line-height: 24px;
+  line-height: 20px;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .postDate {
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Inconsolata", monospace;
+  text-transform: lowercase;
   color: #adb5bd;
-  margin: 15px;
+  margin: 5px 15px;
 }
 .postCategories {
   display: flex;
@@ -74,31 +78,19 @@
   padding: 20px;
   height: 40px;
 }
-.readmore button {
+.readmore p {
   padding: 10px;
   float: right;
   border: none;
   outline: none;
-  background-color: #000000;
-  color: #ffffff;
-  font-family: "Inconsolata", monospace;
-  border-radius: 5px;
-  font-size: 14px;
-  box-shadow: 0.5em -0.5em 5em rgba(0, 0, 0, 0.1);
-  border: 1px solid #000000;
-  transition: ease-in-out 0.1s;
-  cursor: pointer;
-}
-.readmore button:hover {
-  border: 1px solid #000000;
-  background-color: #ffffff;
   color: #000000;
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  text-decoration: underline;
 }
-@media screen and (max-width: 1366px) {
-  .post {
-    width: 45%;
-  }
-  .postDescription {
-    font-size: 16px;
-  }
+.readmore p:hover {
+  color: #2b2d42;
+  transform: scale(1.5);
 }

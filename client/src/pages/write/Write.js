@@ -12,6 +12,7 @@ function Write() {
   const [description, setDescription] = useState("");
   const [file, setFile] = useState("");
   const [categories, setCategories] = useState([]);
+  const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const handleCategories = (cats) => {
     setCategories(cats);
@@ -25,7 +26,7 @@ function Write() {
       postPicture: "",
       categories: categories,
     };
-    if (title && description) {
+    if (title && description && categories.length <= 4) {
       if (file) {
         const data = new FormData();
         // creating file name ( unique name for every image)
@@ -47,8 +48,8 @@ function Write() {
           "http://localhost:8081/posts/post",
           newPost
         );
+        setSuccess(true);
         navigate("/");
-        console.log(response);
       } else {
         let choice = window.confirm("Add post without post picture ?");
         if (choice) {
@@ -57,14 +58,17 @@ function Write() {
               "http://localhost:8081/posts/post",
               newPost
             );
-            console.log(response);
+            setSuccess(true);
+            navigate("/");
           } catch (error) {
             console.log(error);
           }
         }
       }
     } else {
-      window.alert("Cannot add post without title or description !");
+      window.alert(
+        "Cannot add post without title or description or with more than 4 catgeories."
+      );
     }
   };
   return (
@@ -115,6 +119,9 @@ function Write() {
           </div>
           <div className={styles.publishBtn}>
             <button type="submit">publish</button>
+            {success ? (
+              <p className={styles.publish_success}>Published successfully !</p>
+            ) : null}
           </div>
         </div>
       </form>

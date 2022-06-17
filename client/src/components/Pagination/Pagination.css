@@ -1,0 +1,14 @@
+.page-item{
+    padding:10px 0px;
+}
+.page-link{
+    border-color: #495057;
+    border-radius: 2px;
+    color :#495057;
+    transition: all 0.3s;
+}
+.page-link:hover{
+    background-color: #495057;
+    color: #ffffff;
+    border-color: #ffffff;
+}

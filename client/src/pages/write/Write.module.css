@@ -100,3 +100,11 @@ textarea {
   color: #2b2d42;
   background-color: #ffffff;
 }
+.publish_success{
+  margin : 20px 0px;
+  text-transform : capitalize;
+  font-size: 18px;
+  color:#76c893;
+  font-family: "Lora", serif;
+}
+  

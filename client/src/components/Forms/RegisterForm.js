@@ -46,7 +46,7 @@ function Form() {
   return (
     <form action="" className={styles.form}>
       {error ? (
-        <div className={styles.errorContainer}>
+        <div className={styles.error_container}>
           <span>{error}</span>
         </div>
       ) : null}
@@ -87,7 +87,7 @@ function Form() {
           setConfirmPassword(e.target.value);
         }}
       />
-      <button className={styles.register} onClick={onSubmit}>
+      <button className={styles.form_btn} onClick={onSubmit}>
         Sign up
       </button>
     </form>

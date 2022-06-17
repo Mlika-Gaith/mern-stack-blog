@@ -1,18 +1,19 @@
 .container{
     display:flex;
     flex-direction:column;
+    padding:0px;
 }
 .info{
     display:flex;
     flex-direction: row;
-    margin:25px 0px;
+    margin:10px 0px;
     align-items: center;
 }
 .info img{
-    width:50px;
-    height: 50px;
+    width:60px;
+    height: 60px;
     border-radius:50%;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .info p{
     font-family: "Lora", serif;
@@ -24,8 +25,6 @@
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    width:70%;
-    max-width: 800px;
 }
 .comment_form textarea{
     margin:0px;
@@ -33,8 +32,7 @@
     padding:10px;
     border:4px solid #edede9;
     align-self: flex-start;
-    width:96%;
-    max-width: 780px;
+    width:100%;
     color:#001219;
 }
 .comment_form button{
