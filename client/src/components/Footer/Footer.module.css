@@ -1,15 +1,120 @@
-.container {
-  background-color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Mansalva&display=swap');
+.footer_container {
   margin-top: 30px;
-  padding: 40px;
+  padding: 20px 80px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.container p {
-  font-family: "Lora", serif;
+.logo{
+padding:10px 20px;
+height:200px;
+flex:2;
+}
+.small_about{
+  height:200px;
+  padding :10px 20px;
+  flex:1;
+}
+.small_about p{
   font-size: 16px;
-  text-transform: capitalize;
+  font-family: "Lora", serif;
+	text-transform: capitalize;
+	font-weight: 500;
+	position: relative;
+  color:#000000;
+}
+.small_about p:last-child{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.social_links{
+  height:200px;
+  padding:10px 20px;
+  flex:1;
+}
+.footer_container h4{
+  font-size: 18px;
+	color:#495057;
+  font-family: "Lora", serif;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer_container h4::before{
+  content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #495057;
+	height: 2px;
+	box-sizing: border-box;
+	width: 70px;
+}
+.logo_section{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.logo_section img{
+  width:120px;
+  height: 120px;
+}
+.logo_titles{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width:120px;
+  height: 120px;
+  padding:20px;
+}
+.sub_title{
+    font-size: 14px;
+    margin-left: 0;
+    color: #2b2d42;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: 'Mansalva', cursive;
+    position: relative;
+}
+.main_title{
   color: #495057;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: 'Bangers', cursive;
   letter-spacing: 2px;
+}
+.links{
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.social_link{
+  background-color:#2b2d42;
+  padding:10px;
+  color: #ffffff;
+  margin: 0px 10px;
+  margin-bottom: 8px;
+  height: 40px;
+  width: 40px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius:50%;
+  cursor:pointer;
+  border: 1px solid #2b2d42;
+  text-decoration: none;
+  transition: ease 0.2s;
+}
+.social_link:hover{
+  background-color: #ffffff;
+  color: #2b2d42;
 }
