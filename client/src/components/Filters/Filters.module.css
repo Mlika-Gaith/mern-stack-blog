@@ -12,3 +12,14 @@
 .filter:hover{
     background-color: #457b9d;
 }
+.filter_clicked{
+    background-color:#ccd5ae;
+    border:2px solid #ccd5ae;
+    color:#2b2d42;
+    margin: 0px 0px 8px 5px;
+    font-family: "Lora", serif;
+    text-transform: capitalize;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0.5em -0.5em 5em rgba(0, 0, 0, 0.1);
+}

@@ -39,7 +39,7 @@ function Footer() {
             href="https://www.linkedin.com/in/ghaith-mlika-305797214/"
             target="blank"
           >
-            <i class="fa-brands fa-linkedin-in"></i>
+            <i className="fa-brands fa-linkedin-in"></i>
           </a>
           <a
             className={styles.social_link}

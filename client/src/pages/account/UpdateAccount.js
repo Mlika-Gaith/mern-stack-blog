@@ -3,6 +3,7 @@ import styles from "./UpdateAccount.module.css";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function UpdateAccount() {
   const { user, dispatch } = useContext(Context);
   const PF = "http://localhost:8081/images/";
@@ -14,6 +15,7 @@ function UpdateAccount() {
   const [lastName, setLastName] = useState(user.lastName);
   const [firstName, setFirstName] = useState(user.firstName);
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,6 +96,29 @@ function UpdateAccount() {
     }
   };
 
+  // deleting user account
+  const handleDelete = async () => {
+    let decision = window.confirm(
+      "Are you sure you want to delete your account ? this will delete all your posts and comments too."
+    );
+    if (decision) {
+      const id = user._id;
+      dispatch({ type: "LOGOUT" });
+      localStorage.removeItem("user");
+      navigate("/");
+      try {
+        console.log(user);
+        await axios.delete("http://localhost:8081/users/delete/" + id, {
+          data: {
+            userId: id,
+          },
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
   return (
     <div className={styles.infoContainer}>
       <h2>Edit your Account</h2>
@@ -112,6 +137,11 @@ function UpdateAccount() {
         <label htmlFor="imgUpload">
           change profil image : <i className="fa-solid fa-images"></i>
         </label>
+        <div className={styles.delete_area}>
+          <button className={styles.delete_btn} onClick={handleDelete}>
+            delete your account
+          </button>
+        </div>
       </div>
       <form action="" className={styles.accountInfo} onSubmit={handleSubmit}>
         <div className={styles.name_email}>

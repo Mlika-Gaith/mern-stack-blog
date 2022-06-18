@@ -35,30 +35,6 @@ h2 {
   cursor: pointer;
   padding: 10px;
 }
-.bioArea{
-  align-self: flex-start;
-  width:50%;
-  height: 50%;
-  margin-top:20px;
-  margin-left: 20px;
-  padding:20px;
-  display:flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.bioArea textarea{
-  width:90%;
-  height: 100px;
-  padding: 20px;
-  border: 1px solid #2b2d42;
-  border-radius: 10px;
-  font-family: "Lora", serif;
-  color: #2b2d42;
-  box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.2);
-  outline: none;
-  transition: ease 0.3s;
-}
 .accountInfo {
   display: flex;
   margin: 20px;
@@ -122,4 +98,31 @@ label {
   text-transform: capitalize;
   font-size: 15px;
   color:#76c893;
+}
+.delete_area{
+  flex:1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  width:20%;
+  padding:30px;
+}
+.delete_btn{
+  padding: 20px;
+  width: 50%;
+  border: 1px solid #d90429;
+  border-radius: 20px;
+  font-family: "Lora", serif;
+  color: #d90429;
+  box-shadow: 0.2em 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  outline: none;
+  background-color: #ffffff;
+  transition: ease 0.3s;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.delete_btn:hover{
+  background-color: #d90429;
+  color: #ffffff;
 }
