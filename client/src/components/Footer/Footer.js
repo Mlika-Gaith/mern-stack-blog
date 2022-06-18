@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 import logo from "../../images/logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <div className={styles.footer_container}>

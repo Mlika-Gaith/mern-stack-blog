@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Mansalva&display=swap');
+.small_header{
+    padding:30px 60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.small_header h5{
+    font-size: 25px;
+    color: #2b2d42;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: 'Mansalva', cursive;
+    position: relative;
+}
+.main{
+    padding: 50px 20px;
+    display:flex;
+}
+.search_area{
+    flex:1;
+}
+.posts_area{
+    flex:4;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

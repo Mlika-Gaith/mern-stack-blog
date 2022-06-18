@@ -1,38 +1,19 @@
 import "./SideBar.css";
-import personalImg from "../../images/avatar.png";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import personalImg from "../../images/profile.jpg";
 function SideBar() {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    const getCategories = async () => {
-      const response = await axios.get("http://localhost:8081/categories/");
-      setCategories(response.data);
-    };
-    getCategories();
-  });
   return (
     <div className="sideBar">
       <div className="sideBarItem">
         <span className="sideBarTitle"> About me</span>
         <img src={personalImg} alt="personal profil pic" />
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          inventore sunt recusandae reprehenderit sint illo corrupti veritatis.
+          Hi there my name is Ghaith Mlika and nice to meet you. This my first
+          MERN stack project and i hope you enjoy it. Feel Free to visit My
+          github Profil below and take a look at the source code. Thank You :)
         </p>
       </div>
       <div className="sideBarItem">
-        <span className="sideBarTitle"> Categories</span>
-        <ul className="sideBarList">
-          {categories.map((category, i) => (
-            <li className="sideBarListItem" key={i}>
-              {category.title}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="sideBarItem">
-        <span className="sideBarTitle"> follow us</span>
+        <span className="sideBarTitle"> follow me</span>
         <div className="sideBarSocial">
           <i className="fa-brands fa-github"></i>
           <i className="fa-brands fa-linkedin"></i>

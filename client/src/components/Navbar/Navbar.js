@@ -42,6 +42,19 @@ function NavBar() {
               </NavLink>
             </li>
           )}
+          {user ? (
+            <li className="topListItem">
+              <NavLink to="/allposts" className="nav_link">
+                All Posts
+              </NavLink>
+            </li>
+          ) : (
+            <li className="topListItem">
+              <NavLink to="/login" className="nav_link">
+                All Posts
+              </NavLink>
+            </li>
+          )}
 
           {user ? (
             <li className="topListItem" onClick={handleLogout}>
