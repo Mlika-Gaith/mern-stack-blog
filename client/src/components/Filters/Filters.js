@@ -1,5 +1,9 @@
 import styles from "./Filters.module.css";
 export default function Filters(props) {
+  function handleClick(event) {
+    event.preventDefault();
+    props.filter(event.target.value);
+  }
   const filters = [
     "tech",
     "sports",
@@ -15,6 +19,8 @@ export default function Filters(props) {
     "academic",
   ];
   return filters.map((filter) => (
-    <button className={styles.filter}>{filter}</button>
+    <button className={styles.filter} value={filter} onClick={handleClick}>
+      {filter}
+    </button>
   ));
 }

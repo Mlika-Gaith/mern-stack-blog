@@ -23,7 +23,6 @@ function Categories(props) {
       index === position ? !item : item
     );
     setCheckedSate(updatedCheckedState);
-    console.log(updatedCheckedState);
     let cats = [];
     for (var key in updatedCheckedState) {
       if (updatedCheckedState[key] === true) {

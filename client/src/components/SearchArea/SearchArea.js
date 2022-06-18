@@ -25,7 +25,7 @@ export default function SearchArea(props) {
       <form className={styles.search_form}>
         <p className={styles.area_title}>Filter</p>
         <div className={styles.filters}>
-          <Filters />
+          <Filters filter={props.filter} />
         </div>
       </form>
     </div>

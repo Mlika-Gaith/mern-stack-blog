@@ -10,17 +10,22 @@ export default function AllPosts() {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [filter, setFilter] = useState("");
+  console.log(filter);
   useEffect(() => {
     async function fetchPosts() {
       try {
-        let response = await axios.get("http://localhost:8081/posts/");
+        const params = new URLSearchParams([["filter", filter]]);
+        let response = await axios.get("http://localhost:8081/posts/", {
+          params,
+        });
         setPosts(response.data);
       } catch (error) {
         console.log(error.message);
       }
     }
     fetchPosts();
-  }, []);
+  }, [filter]);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts
@@ -51,7 +56,11 @@ export default function AllPosts() {
       </div>
       <div className={styles.main}>
         <div className={styles.search_area}>
-          <SearchArea search={searchParams} setSearch={setSearchParams} />
+          <SearchArea
+            search={searchParams}
+            setSearch={setSearchParams}
+            filter={setFilter}
+          />
         </div>
         <div className={styles.posts_area}>
           <Posts posts={currentPosts} />
