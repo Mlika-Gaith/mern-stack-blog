@@ -12,3 +12,6 @@
     color: #ffffff;
     border-color: #ffffff;
 }
+.pagination{
+    align-self: center;
+}

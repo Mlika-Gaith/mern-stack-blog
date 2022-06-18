@@ -105,4 +105,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+// search posts
+router.get("/post", async (req, res) => {
+  const title = req.params.title;
+  console.log(title);
+  try {
+    let posts = await Post.find({ title });
+    res.status(200).json(posts);
+  } catch (error) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
