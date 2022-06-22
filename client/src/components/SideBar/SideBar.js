@@ -15,7 +15,10 @@ function SideBar() {
       <div className="sideBarItem">
         <span className="sideBarTitle">Source Code</span>
         <div className="sideBarSocial">
-          <a href="" target="_blank">
+          <a
+            href="https://github.com/Mlika-Gaith/mern-stack-blog"
+            target="_blank"
+          >
             see repo
           </a>
         </div>
