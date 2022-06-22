@@ -27,21 +27,21 @@
   margin: 10px;
 }
 .postDescription {
-  font-family: "Inconsolata", monospace;
+  font-family: "Lora", serif;
   color: #495057;
-  font-size: 20px;
+  font-size: 18px;
   margin: 20px;
   text-align: justify;
   line-height: 20px;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .postDate {
   font-size: 15px;
-  font-family: "Inconsolata", monospace;
-  text-transform: lowercase;
+  font-family: "Lora", serif;
+  text-transform: capitalize;
   color: #adb5bd;
   margin: 5px 15px;
 }

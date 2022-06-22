@@ -1,5 +1,5 @@
 import "./SideBar.css";
-import personalImg from "../../images/profile.jpg";
+import personalImg from "../../images/register.png";
 function SideBar() {
   return (
     <div className="sideBar">
@@ -13,12 +13,11 @@ function SideBar() {
         </p>
       </div>
       <div className="sideBarItem">
-        <span className="sideBarTitle"> follow me</span>
+        <span className="sideBarTitle">Source Code</span>
         <div className="sideBarSocial">
-          <i className="fa-brands fa-github"></i>
-          <i className="fa-brands fa-linkedin"></i>
-          <i className="fa-brands fa-facebook"></i>
-          <i className="fa-brands fa-youtube"></i>
+          <a href="" target="_blank">
+            see repo
+          </a>
         </div>
       </div>
     </div>

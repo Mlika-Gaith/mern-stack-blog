@@ -37,7 +37,7 @@
   height: 140px;
   border-radius: 20px;
 }
-.sideBarItem p {
+.sideBarItem p{
   padding: 30px;
   font-size: 18px;
   text-align: justify;
@@ -79,8 +79,16 @@
   cursor: pointer;
   text-transform: lowercase;
 }
-.sideBar i {
+.sideBarSocial a{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Lora", serif;
+  font-weight: 200;
   font-size: 16px;
-  margin-left: 10px;
-  cursor: pointer;
+  color: #434343;
+  transition: ease 0.3s;
+}
+.sideBarSocial a:hover{
+  text-decoration: underline;
+  color: #434343;
 }

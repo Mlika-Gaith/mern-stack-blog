@@ -14,10 +14,6 @@ function Post(props) {
       ) : (
         <img src={postImg} alt="" />
       )}
-
-      <p className={styles.postDate}>
-        Created AT : {new Date(props.post.createdAt).toDateString()}
-      </p>
       <p className={styles.postDate}>
         Last Updated AT : {new Date(props.post.updatedAt).toDateString()}
       </p>

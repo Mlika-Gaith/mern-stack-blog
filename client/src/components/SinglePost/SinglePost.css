@@ -27,7 +27,7 @@
 }
 .singlePostTitle {
   flex: 9;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora", serif;
   color: #001219;
   text-transform: capitalize;
   font-size: 45px;
@@ -57,11 +57,11 @@
   text-transform: capitalize;
 }
 .singlePostDate {
-  font-family: "Inconsolata", monospace;
+  font-family: "Lora", serif;
   opacity: 0.8;
 }
 .singlePostDescription {
-  font-family: "Inconsolata", monospace;
+  font-family: "Lora", serif;
   color: #001219;
   font-size: 25px;
   margin: 20px;
