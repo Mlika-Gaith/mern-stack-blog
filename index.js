@@ -27,7 +27,6 @@ const commentRoute = require("./routes/comments");
 app.use(express.json());
 
 // * adding uploaded images path
-const path = require("path");
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // * connecting to mongodb
