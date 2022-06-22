@@ -3,7 +3,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-
+const path = require("path");
+const PORT = process.env.PORT || 8081;
 // Protect from cross origin error
 app.use(cors());
 
@@ -31,7 +32,7 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // * connecting to mongodb
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.MONGODB_URI || process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -59,4 +60,11 @@ app.use("/users", usersRoute);
 app.use("/posts", postsRoute);
 app.use("/categories", categoryRoute);
 app.use("/comments", commentRoute);
-app.listen("8081", () => console.log("server running"));
+// for deployîng in heroko
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.use("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
+app.listen(PORT, () => console.log("server running"));
