@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "engines" :{
-<<<<<<< HEAD
-    "node": "16.14.0"
-=======
-    "node": "14.x",
+    "node": "16.14.0",
     "npm": "6.14.7"
->>>>>>> ffeba6b9e592b736b7b6090ec278d1c92e1aa4bd
   },
   "scripts": {
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
