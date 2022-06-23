@@ -13,7 +13,7 @@ function Home() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        let response = await axios.get("http://localhost:8081/posts/");
+        let response = await axios.get("/posts/");
         setPosts(response.data);
       } catch (error) {
         console.log(error.message);

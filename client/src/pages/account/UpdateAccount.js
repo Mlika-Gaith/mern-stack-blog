@@ -6,7 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function UpdateAccount() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8081/images/";
+  const PF = "/images/";
   const [file, setFile] = useState("");
   const [username, setUsername] = useState(user.username);
   const [email, setEmail] = useState(user.email);
@@ -40,24 +40,21 @@ function UpdateAccount() {
           data.append("file", file);
           updatedUser.profilPicture = filename;
           try {
-            let response = await axios.post(
-              "http://localhost:8081/file/upload/",
-              data
-            );
+            let response = await axios.post("/file/upload/", data);
           } catch (error) {
             console.log(error);
           }
         }
         try {
           const response = await axios.put(
-            "http://localhost:8081/users/update/" + user._id,
+            "/users/update/" + user._id,
             updatedUser
           );
           setSuccess(true);
           //perform update posts and comments here
           /* update posts' username*/
           try {
-            await axios.post("http://localhost:8081/posts/post/username", {
+            await axios.post("/posts/post/username", {
               old_username: old_username,
               username: username,
             });
@@ -66,7 +63,7 @@ function UpdateAccount() {
           }
           /* update user comments here*/
           try {
-            await axios.post("http://localhost:8081/comments/comment/update", {
+            await axios.post("/comments/comment/update", {
               old_username: old_username,
               new_username: username,
               old_profil_picture: old_profil_picture,
@@ -108,7 +105,7 @@ function UpdateAccount() {
       navigate("/");
       try {
         console.log(user);
-        await axios.delete("http://localhost:8081/users/delete/" + id, {
+        await axios.delete("/users/delete/" + id, {
           data: {
             userId: id,
           },

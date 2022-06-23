@@ -12,7 +12,7 @@ function Form() {
     dispatch({ type: "LOGIN_START" });
     setError("");
     try {
-      const response = await axios.post("http://localhost:8081/login/", {
+      const response = await axios.post("/login/", {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

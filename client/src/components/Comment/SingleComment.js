@@ -5,17 +5,16 @@ import img from "../../images/avatar.png";
 import axios from "axios";
 export default function Comment(props) {
   const { user } = useContext(Context);
-  const PF = "http://localhost:8081/images/";
+  const PF = "/images/";
   const handleDelete = async () => {
     const verify = window.confirm(
       "Are you sure you want to delete this comment ?"
     );
     if (verify) {
       try {
-        await axios.delete(
-          "http://localhost:8081/comments/delete/" + props.comment._id,
-          { data: { username: user.username } }
-        );
+        await axios.delete("/delete/" + props.comment._id, {
+          data: { username: user.username },
+        });
         window.alert("Comment deleted !");
         window.location.reload(false);
       } catch (error) {

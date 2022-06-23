@@ -16,7 +16,7 @@ export default function AllPosts() {
     async function fetchPosts() {
       try {
         const params = new URLSearchParams([["filter", filter]]);
-        let response = await axios.get("http://localhost:8081/posts/", {
+        let response = await axios.get("/posts/", {
           params,
         });
         setPosts(response.data);

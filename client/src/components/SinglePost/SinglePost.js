@@ -14,16 +14,14 @@ function SinglePost(props) {
   const [categories, setCategories] = useState([]);
   const [title, setTitle] = useState(props.post.title);
   const [description, setDescription] = useState(props.post.description);
-  const PF = "http://localhost:8081/images/";
+  const PF = "/images/";
   const params = useParams();
   // fetch comments
   const [comments, setComments] = useState([]);
   useEffect(() => {
     async function fetchComments() {
       try {
-        let response = await axios.get(
-          "http://localhost:8081/comments/" + params.id
-        );
+        let response = await axios.get("/comments/" + params.id);
         setComments(response.data);
       } catch (err) {
         console.log(err);
@@ -42,10 +40,9 @@ function SinglePost(props) {
     const verify = window.confirm("Are you sure you want to delete post ?");
     if (verify) {
       try {
-        await axios.delete(
-          "http://localhost:8081/posts/delete/" + props.post._id,
-          { data: { username: user.username } }
-        );
+        await axios.delete("/posts/delete/" + props.post._id, {
+          data: { username: user.username },
+        });
         navigate("/");
       } catch (error) {
         console.log(error);
@@ -58,7 +55,7 @@ function SinglePost(props) {
   const handleUpdate = async () => {
     if (title && description && categories.length <= 4) {
       try {
-        await axios.put("http://localhost:8081/posts/post/" + props.post._id, {
+        await axios.put("/posts/post/" + props.post._id, {
           username: user.username,
           title,
           description,

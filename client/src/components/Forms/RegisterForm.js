@@ -27,7 +27,7 @@ function Form() {
       if (password === confirmPassword) {
         // send data to server
         try {
-          const response = await axios.post("http://localhost:8081/register/", {
+          const response = await axios.post("/register/", {
             username,
             email,
             password,

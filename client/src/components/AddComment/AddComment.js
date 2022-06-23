@@ -4,12 +4,12 @@ import { useState } from "react";
 import axios from "axios";
 export default function AddComment(props) {
   const [comment, setComment] = useState("");
-  const PF = "http://localhost:8081/images/";
+  const PF = "/images/";
   const handleComment = async (e) => {
     e.preventDefault();
     if (comment.length != 0) {
       try {
-        await axios.post("http://localhost:8081/comments/comment", {
+        await axios.post("/comments/comment", {
           username: props.user.username,
           post_id: props.post,
           comment,
