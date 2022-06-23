@@ -8,7 +8,7 @@
   },
   "scripts": {
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
-    "my-custom-start": "PROD=true node index.js" 
+    "start": "node index.js" 
   },
   "keywords": [],
   "author": "",
