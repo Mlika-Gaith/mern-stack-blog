@@ -14,7 +14,7 @@ function SinglePostPage() {
   useEffect(() => {
     const getPost = async () => {
       const response = await axios.get(
-        "http://localhost:8081/posts/" + params.id
+        "/posts/" + params.id
       );
       setPost(response.data);
     };

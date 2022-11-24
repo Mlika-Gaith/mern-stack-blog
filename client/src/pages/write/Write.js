@@ -37,7 +37,7 @@ function Write() {
         newPost.postPicture = filename;
         try {
           let response = await axios.post(
-            "http://localhost:8081/file/upload/",
+            "/file/upload/",
             data
           );
           console.log(response);
@@ -45,7 +45,7 @@ function Write() {
           console.log(error);
         }
         const response = await axios.post(
-          "http://localhost:8081/posts/post",
+          "/posts/post",
           newPost
         );
         setSuccess(true);
@@ -55,7 +55,7 @@ function Write() {
         if (choice) {
           try {
             const response = await axios.post(
-              "http://localhost:8081/posts/post",
+              "/posts/post",
               newPost
             );
             setSuccess(true);
