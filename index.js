@@ -30,6 +30,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // * connecting to mongodb
+console.log(process.env.MONGODB_URI)
 mongoose
   .connect(process.env.MONGODB_URI || process.env.MONGO_URL, {
     useNewUrlParser: true,
